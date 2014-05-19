@@ -17,7 +17,14 @@ $(document).ready(function(){
   }
 
   function makeScoreArray(player){
-    var array = [getHandScore(player, 1), getHandScore(player, 2)];
+    var array = []; // [getHandScore(player, 1), getHandScore(player, 2)];
+    var i = 1;
+    
+    while(i<=5){
+      array.push(getHandScore(player, i));  
+      i = i + 1;
+    }
+
     return array;
   }
 
@@ -33,18 +40,14 @@ $(document).ready(function(){
   }
 
   function calculateAll(){
-    calculatePlayerTotal(1);
-    calculatePlayerTotal(2);
-    calculatePlayerTotal(3);
-    calculatePlayerTotal(4);
-    calculatePlayerTotal(5);
-    calculatePlayerTotal(6);
-    calculatePlayerTotal(7);
-    calculatePlayerTotal(8);
+    var i = 1;
+    while(i<9){
+      calculatePlayerTotal(i);  
+      i = i + 1;
+    }
+   
   }
 
-  function hightlightHighScore(){
-    
-  }
+ 
 });
 
