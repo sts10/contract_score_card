@@ -9,42 +9,86 @@
 <body>
   <div id="header">
     <h1>Contract Rummy Score Card</h1>
+    
   </div>
   <table>
 
     <tr>
-      <td>Name</td>
-      <td><input type="text" class="name" id="player1_name"></td>    
-      <td><input type="text" class="name" id="player2_name"></td>  
-      <td><input type="text" class="name" id="player3_name"></td>  
-      <td><input type="text" class="name" id="player4_name"></td>  
-      <td><input type="text" class="name" id="player5_name"></td>  
-      <td><input type="text" class="name" id="player6_name"></td>  
-      <td><input type="text" class="name" id="player7_name"></td>  
-      <td><input type="text" class="name" id="player8_name"></td>  
+      <th>Name</th>
+      <th><input type="text" class="name" id="player1_name"></th>    
+      <th><input type="text" class="name" id="player2_name"></th>  
+      <th><input type="text" class="name" id="player3_name"></th>  
+      <th><input type="text" class="name" id="player4_name"></th>  
+      <th><input type="text" class="name" id="player5_name"></th>  
+      <th><input type="text" class="name" id="player6_name"></th>  
+      <th><input type="text" class="name" id="player7_name"></th>  
+      <th><input type="text" class="name" id="player8_name"></th>  
     </tr>
     <tr>
       <td>2 sets of 3</td>
-      <td><input type="text" class="hand1" id="player1_hand1"></td>
-      <td><input type="text" class="hand1" id="player2_hand1"></td>
-      <td><input type="text" class="hand1" id="player3_hand1"></td>
-      <td><input type="text" class="hand1" id="player4_hand1"></td>
-      <td><input type="text" class="hand1" id="player5_hand1"></td>
-      <td><input type="text" class="hand1" id="player6_hand1"></td>
-      <td><input type="text" class="hand1" id="player7_hand1"></td>
-      <td><input type="text" class="hand1" id="player8_hand1"></td>
+      <td><input type="text" class="hand" id="player1_hand1"></td>
+      <td><input type="text" class="hand" id="player2_hand1"></td>
+      <td><input type="text" class="hand" id="player3_hand1"></td>
+      <td><input type="text" class="hand" id="player4_hand1"></td>
+      <td><input type="text" class="hand" id="player5_hand1"></td>
+      <td><input type="text" class="hand" id="player6_hand1"></td>
+      <td><input type="text" class="hand" id="player7_hand1"></td>
+      <td><input type="text" class="hand" id="player8_hand1"></td>
     </tr>
     <tr>
-      <td>Run of 4 Set of 3</td>
-      <td><input type="text" class="hand2" id="player1_hand2"></td>
-      <td><input type="text" class="hand2" id="player2_hand2"></td>
-      
+      <td>Run of 4, Set of 3</td>
+      <td><input type="text" class="hand" id="player1_hand2"></td>
+      <td><input type="text" class="hand" id="player2_hand2"></td>
+      <td><input type="text" class="hand" id="player3_hand2"></td>
+      <td><input type="text" class="hand" id="player4_hand2"></td>
+      <td><input type="text" class="hand" id="player5_hand2"></td>
+      <td><input type="text" class="hand" id="player6_hand2"></td>
+      <td><input type="text" class="hand" id="player7_hand2"></td>
+      <td><input type="text" class="hand" id="player8_hand2"></td>
     </tr>
     <tr>
-      <td>Total</td>
+      <td>2 Runs of 4</td>
+      <td><input type="text" class="hand" id="player1_hand3"></td>
+      <td><input type="text" class="hand" id="player2_hand3"></td>
+      <td><input type="text" class="hand" id="player3_hand3"></td>
+      <td><input type="text" class="hand" id="player4_hand3"></td>
+      <td><input type="text" class="hand" id="player5_hand3"></td>
+      <td><input type="text" class="hand" id="player6_hand3"></td>
+      <td><input type="text" class="hand" id="player7_hand3"></td>
+      <td><input type="text" class="hand" id="player8_hand3"></td>
+    </tr>
+    <tr>
+      <td>3 Sets of 3</td>
+      <td><input type="text" class="hand" id="player1_hand4"></td>
+      <td><input type="text" class="hand" id="player2_hand4"></td>
+      <td><input type="text" class="hand" id="player3_hand4"></td>
+      <td><input type="text" class="hand" id="player4_hand4"></td>
+      <td><input type="text" class="hand" id="player5_hand4"></td>
+      <td><input type="text" class="hand" id="player6_hand4"></td>
+      <td><input type="text" class="hand" id="player7_hand4"></td>
+      <td><input type="text" class="hand" id="player8_hand4"></td>
+    </tr>
+    <tr>
+      <td>Run of 7, Set of 3</td>
+      <td><input type="text" class="hand" id="player1_hand5"></td>
+      <td><input type="text" class="hand" id="player2_hand5"></td>
+      <td><input type="text" class="hand" id="player3_hand5"></td>
+      <td><input type="text" class="hand" id="player4_hand5"></td>
+      <td><input type="text" class="hand" id="player5_hand5"></td>
+      <td><input type="text" class="hand" id="player6_hand5"></td>
+      <td><input type="text" class="hand" id="player7_hand5"></td>
+      <td><input type="text" class="hand" id="player8_hand5"></td>
+    </tr>
+    <tr>
+      <td class="total" id="label">Total</td>
       <td class="total"><span id="player1_total"></span></td>    
-      <td class="total"><span id="player2_total"></span></td>    
-      
+      <td class="total"><span id="player2_total"></span></td>
+      <td class="total"><span id="player3_total"></span></td>
+      <td class="total"><span id="player4_total"></span></td>
+      <td class="total"><span id="player5_total"></span></td>
+      <td class="total"><span id="player6_total"></span></td>
+      <td class="total"><span id="player7_total"></span></td>    
+      <td class="total"><span id="player8_total"></span></td>    
     </tr>
   </table>
 

@@ -8,14 +8,8 @@ html{
   position: relative;
 }
 
-/* Make container responsive
-Use padding instead of margin so tweet button still works properly */
-article{
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 3em 1em 0;
-  position: relative;
+body {
+  font-family: 'Walter Turncoat', arial;
 }
 
 #header {
@@ -23,22 +17,22 @@ article{
   max-width: 900px;
   margin: 0 auto;
   position: relative;
+
 }
 
-#title {
-  margin: 0 auto;
-  position: relative;
+h1 {
+  text-align: center;
 }
 
 table {
   width: 100%;
   /*max-width: 900px;*/
   margin: 0 auto;
-  padding: 3em 1em 0;
+  padding: 1em 1em 0;
   position: relative;
 }
 
-td {
+th, td {
   font-family: 'Walter Turncoat', arial;
   font-weight: bold;
   font-size: 18px;
@@ -48,8 +42,18 @@ td {
   margin: 0;
 }
 
-td:first-child {
+td:first-child, th:first-child {
   width: 200px;
+  border-left: 3px #7DA193 solid;
+}
+
+td.total {
+  text-align: right;
+  border-top: 3px black solid;
+}
+
+#label {
+  text-align: left;
 }
 
 *:focus {
@@ -60,6 +64,7 @@ input[type=text] {
   font-family: 'Walter Turncoat', arial;
   font-weight: bold;
   font-size: 18px;
+  text-align: center;
   width: 100%;
   border: 0;
 }
