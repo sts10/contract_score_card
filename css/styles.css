@@ -1,0 +1,43 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Reset containers */
+body,
+html{
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Make container responsive
+Use padding instead of margin so tweet button still works properly */
+article{
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 3em 1em 0;
+  position: relative;
+}
+
+#header {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#title {
+  margin: 0 auto;
+  position: relative;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3em 1em 0;
+  position: relative;
+}
+/*
+td:first-child {
+  width: 900px;
+}*/
