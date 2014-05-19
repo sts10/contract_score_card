@@ -42,5 +42,9 @@ $(document).ready(function(){
     calculatePlayerTotal(7);
     calculatePlayerTotal(8);
   }
+
+  function hightlightHighScore(){
+    
+  }
 });
 
