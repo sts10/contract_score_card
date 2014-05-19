@@ -9,6 +9,11 @@ $(document).ready(function(){
     var player_number = ($(this).attr('id')).charAt(6);
     low_score = 10000;
 
+    if ($(this).val().indexOf("*") > -1) {
+      var hand_number = ($(this).attr('id')).charAt(12);
+      $(this).val(getPenaltyScoreForPlayer(player_number, hand_number));
+    }
+
     if (playerHasName(player_number)) {
       calculatePlayerTotal(player_number); 
       postPlayerTotal(player_number);
@@ -28,6 +33,23 @@ $(document).ready(function(){
       return 0;
     }
   }
+
+  function getPenaltyScoreForPlayer(penalized_player, hand){
+    var i = 1;
+    var highest_score_of_hand = 0;
+
+    while(i<9){
+      if (playerHasName(i) && i !== penalized_player) {
+        var this_player_score = getHandScore(i, hand);
+        if (this_player_score > highest_score_of_hand){  
+          highest_score_of_hand = this_player_score;
+        }
+      }
+      i = i + 1;
+    }
+    return parseInt(highest_score_of_hand);
+  }
+
 
   function makeScoreArray(player){
     var array = []; // [getHandScore(player, 1), getHandScore(player, 2)];
