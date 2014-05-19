@@ -8,14 +8,14 @@ $(document).ready(function(){
   $('input[type=text]').on("keyup", function(){
     var player_number = ($(this).attr('id')).charAt(6);
     low_score = 10000;
-    
+
     if (playerHasName(player_number)) {
       calculatePlayerTotal(player_number); 
       postPlayerTotal(player_number);
     }
 
-    findCurrentLeader();
-    highlightHighScore();
+    updateCurrentLeader();
+    highlightLeader();
   });
 
   function getHandScore(player, hand){
@@ -59,13 +59,12 @@ $(document).ready(function(){
   }
 
 
-  function findCurrentLeader(){
+  function updateCurrentLeader(){
     var i = 1;
 
     while(i<9){
       if (playerHasName(i)) {
         var this_player_score = calculatePlayerTotal(i);
-        console.log("I'm going through the loop and this player's score is " + this_player_score);
         if (this_player_score < low_score){  
           low_score = this_player_score;
           leader = i;
@@ -73,11 +72,10 @@ $(document).ready(function(){
       }
       i = i + 1;
     }
-    console.log('I found the leader and it is player '+ leader + ' with score of ' + low_score);
-    // return [leader, high_ score];
+    
   }
 
-  function highlightHighScore(){
+  function highlightLeader(){
 
     // remove background color from old leader
     
