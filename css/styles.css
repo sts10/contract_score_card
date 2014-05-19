@@ -32,12 +32,34 @@ article{
 
 table {
   width: 100%;
-  max-width: 900px;
+  /*max-width: 900px;*/
   margin: 0 auto;
   padding: 3em 1em 0;
   position: relative;
 }
-/*
+
+td {
+  font-family: 'Walter Turncoat', arial;
+  font-weight: bold;
+  font-size: 18px;
+  border-top: 3px #7DA193 solid;
+  border-right: 3px #7DA193 solid;
+  padding: 4px;
+  margin: 0;
+}
+
 td:first-child {
-  width: 900px;
-}*/
+  width: 200px;
+}
+
+*:focus {
+    outline: 0;
+}
+
+input[type=text] {
+  font-family: 'Walter Turncoat', arial;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  border: 0;
+}
