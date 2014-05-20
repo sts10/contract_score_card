@@ -47,8 +47,36 @@ tr:nth-child(2) td {
   border-top: 3px black solid;
 }
 
-td:first-child, th:first-child {
+th {
+  height: 40px;
+  -webkit-transition: height 2s; /* For Safari 3.1 to 6.0 */
+  transition: height 2s;
+}
+
+th input {
+  -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
+  transition: 2s;
+
+}
+
+th.expanded {
+  height: 100px;
+}
+
+th.expanded input {
+  width: 100%;
+  font-size: 16px;
+  transform:rotate(-55deg);
+  -ms-transform:rotate(-55deg); /* IE 9 */
+  -webkit-transform:rotate(-55deg); /* Opera, Chrome, and Safari */
+}
+
+td:first-child.expanded, th:first-child.expanded {
   width: 200px;
+}
+
+td:first-child, th:first-child {
+  width: 200px !important;
   border-left: 3px #7DA193 solid;
 }
 
@@ -74,6 +102,7 @@ input[type=text] {
   font-weight: bold;
   font-size: 18px;
   text-align: center;
+  background-color: transparent;
   width: 100%;
   border: 0;
 }

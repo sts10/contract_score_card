@@ -20,9 +20,21 @@ $(document).ready(function(){
       calculateAndPostPlayerTotal(player_number);
     }
 
+    if (getLongestNameLength() > 5){
+      rotateNames();
+    } else {
+      straightenNames();
+    }
+
     updateCurrentLeader();
     highlightLeader();
   });
+
+  // when name text box is rotated, it becomes harder to click in to to edit
+  // this listens for clicks and then places focus in the child box, if there is one. 
+  $('th').on("click", function(){
+    $(this).children('input').focus();
+  })
 
   function getHandScore(player, hand){
     var value = $("#player" + player + "_hand" + hand).val();
@@ -90,7 +102,6 @@ $(document).ready(function(){
   function highlightLeader(){
 
     // remove background color from old leader
-    $('.name').css("background-color", "transparent");
     $('.name').parent().css("background-color", "transparent");
     $('.total').css("background-color", "transparent");
     
@@ -98,13 +109,36 @@ $(document).ready(function(){
     var name_id = "#player" + leader+"_name";
     var total_id = "#player" + leader+"_total";
 
-    $(name_id).css("background-color", "#FFFF99");
     $(name_id).parent().css("background-color", "#FFFF99");
     $(total_id).css("background-color", "#FFFF99");
   }
 
   function playerHasName(player_number){
     return ($("#player" + player_number + "_name").val().trim().length >= 1)
+  }
+
+  function getLongestNameLength(){
+    var i = 1;
+    var longest_name_length = 0;
+    while (i <= number_of_players){
+      if (playerHasName(i)) {
+        var this_player_name = $("#player" + i + "_name").val(); 
+        if (this_player_name.length > longest_name_length) {
+          longest_name_length = this_player_name.length;
+        }
+      }
+      i = i + 1;
+    }
+    return parseInt(longest_name_length);
+  }
+
+  function rotateNames(){
+    // console.log("called rotateNames");
+    $('th').addClass('expanded');
+  }
+
+  function straightenNames(){
+    $('th').removeClass("expanded");
   }
 
  
