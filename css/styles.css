@@ -42,9 +42,17 @@ th, td {
   margin: 0;
 }
 
+tr:nth-child(2) td {
+  border-top: 3px black solid;
+}
+
 td:first-child, th:first-child {
   width: 200px;
   border-left: 3px #7DA193 solid;
+}
+
+tr:last-child td {
+  border-bottom: 3px #7DA193 solid;
 }
 
 td.total {
