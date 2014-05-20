@@ -76,7 +76,7 @@ td:first-child.expanded, th:first-child.expanded {
 }
 
 td:first-child, th:first-child {
-  width: 200px !important;
+  width: 200px;
   border-left: 3px #7DA193 solid;
 }
 
