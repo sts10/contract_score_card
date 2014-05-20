@@ -20,7 +20,7 @@ $(document).ready(function(){
       calculateAndPostPlayerTotal(player_number);
     }
 
-    if (getLongestNameLength() > 5){
+    if (getLongestNameLength() > 6){
       rotateNames();
     } else {
       straightenNames();
