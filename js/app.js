@@ -13,9 +13,8 @@ $(document).ready(function(){
       $(this).val(getPenaltyScoreForPlayer(player_number, hand_number));
     }
 
-    if (playerHasName(player_number)) {
-      calculatePlayerTotal(player_number); 
-      postPlayerTotal(player_number);
+    if (playerHasName(player_number)) { 
+      calculateAndPostPlayerTotal(player_number);
     }
 
     updateCurrentLeader();
@@ -51,7 +50,7 @@ $(document).ready(function(){
 
 
   function makeScoreArray(player){
-    var array = []; // [getHandScore(player, 1), getHandScore(player, 2)];
+    var array = [];
     var i = 1;
     
     while(i<=5){
@@ -72,7 +71,7 @@ $(document).ready(function(){
     return player_total;
   }
 
-  function postPlayerTotal(player_num){
+  function calculateAndPostPlayerTotal(player_num){
     var player_total = calculatePlayerTotal(player_num);
     var id = "#player" + player_num + "_total";
 
