@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  var number_of_players = 8;
+  var number_of_hands = 5;
+
   var low_score = 10000;
   var leader = 0;
 
@@ -22,21 +25,15 @@ $(document).ready(function(){
   });
 
   function getHandScore(player, hand){
-    var id = "#player" + player + "_hand" + hand;
-    var value = $(id).val();
-    if(value) {
-      return parseInt(value);
-    }
-    else {
-      return 0;
-    }
+    var value = $("#player" + player + "_hand" + hand).val();
+    return value ? parseInt(value) : 0;
   }
 
   function getPenaltyScoreForPlayer(penalized_player, hand){
     var i = 1;
     var highest_score_of_hand = 0;
 
-    while(i<9){
+    while (i <= number_of_players){
       if (playerHasName(i) && i !== penalized_player) {
         var this_player_score = getHandScore(i, hand);
         if (this_player_score > highest_score_of_hand){  
@@ -53,7 +50,7 @@ $(document).ready(function(){
     var array = [];
     var i = 1;
     
-    while(i<=5){
+    while (i <= number_of_hands){
       array.push(getHandScore(player, i));  
       i = i + 1;
     }
@@ -66,23 +63,18 @@ $(document).ready(function(){
   }
 
   function calculatePlayerTotal(player_num){
-    var player_array = makeScoreArray(player_num);
-    var player_total = sumArray(player_array);
-    return player_total;
+    return sumArray(makeScoreArray(player_num));
   }
 
   function calculateAndPostPlayerTotal(player_num){
-    var player_total = calculatePlayerTotal(player_num);
-    var id = "#player" + player_num + "_total";
-
-    $(id).html(player_total);
+    $("#player" + player_num + "_total").html(calculatePlayerTotal(player_num));
   }
 
 
   function updateCurrentLeader(){
     var i = 1;
 
-    while(i<9){
+    while (i <= number_of_players){
       if (playerHasName(i)) {
         var this_player_score = calculatePlayerTotal(i);
         if (this_player_score < low_score){  
@@ -112,13 +104,7 @@ $(document).ready(function(){
   }
 
   function playerHasName(player_number){
-    var id = "#player" + player_number + "_name";
-    if ($(id).val().trim().length >= 1) {
-      return true;
-    } else {
-      return false;
-    }
-
+    return ($("#player" + player_number + "_name").val().trim().length >= 1)
   }
 
  
