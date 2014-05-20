@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  // alert('test');
 
   var low_score = 10000;
   var leader = 0;
