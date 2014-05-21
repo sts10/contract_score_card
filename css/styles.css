@@ -63,11 +63,11 @@ th input {
 
 }
 
-th.expanded {
+th.rotated {
   height: 100px;
 }
 
-th.expanded input {
+th.rotated input {
   width: 100%;
   font-size: 14px;
   /*letter-spacing: -1px;*/
@@ -76,7 +76,7 @@ th.expanded input {
   -webkit-transform:rotate(-55deg); /* Opera, Chrome, and Safari */
 }
 
-td:first-child.expanded, th:first-child.expanded {
+td:first-child.rotated, th:first-child.rotated {
   width: 200px;
 }
 

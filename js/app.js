@@ -135,11 +135,11 @@ $(document).ready(function(){
 
   function rotateNames(){
     // console.log("called rotateNames");
-    $('th').addClass('expanded');
+    $('th').addClass('rotated');
   }
 
   function straightenNames(){
-    $('th').removeClass("expanded");
+    $('th').removeClass("rotated");
   }
 
  
