@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   var number_of_players = 8;
   var number_of_hands = 5;
+  var max_name_length_before_rotate = 7;
 
   var low_score = 10000;
   var leader = 0;
@@ -20,7 +21,7 @@ $(document).ready(function(){
       calculateAndPostPlayerTotal(player_number);
     }
 
-    if (getLongestNameLength() > 6){
+    if (getLongestNameLength() > max_name_length_before_rotate){
       rotateNames();
     } else {
       straightenNames();

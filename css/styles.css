@@ -25,6 +25,10 @@ h1 {
   margin-bottom: 0px;
 }
 
+a {
+  color: #7DA193;
+}
+
 table {
   width: 100%;
   /*max-width: 900px;*/
@@ -65,7 +69,8 @@ th.expanded {
 
 th.expanded input {
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
+  /*letter-spacing: -1px;*/
   transform:rotate(-55deg);
   -ms-transform:rotate(-55deg); /* IE 9 */
   -webkit-transform:rotate(-55deg); /* Opera, Chrome, and Safari */
