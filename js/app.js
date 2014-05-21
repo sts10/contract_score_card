@@ -31,8 +31,8 @@ $(document).ready(function(){
     highlightLeader();
   });
 
-  // when name text box is rotated, it becomes harder to click in to to edit
-  // this listens for clicks and then places focus in the child box, if there is one. 
+  // When name text box is rotated, it becomes harder to click in to to edit
+  // This listens for clicks and then places focus in the child box, if there is one. 
   $('th').on("click", function(){
     $(this).children('input').focus();
   })
@@ -134,7 +134,6 @@ $(document).ready(function(){
   }
 
   function rotateNames(){
-    // console.log("called rotateNames");
     $('th').addClass('rotated');
   }
 
