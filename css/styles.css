@@ -31,7 +31,6 @@ a {
 
 table {
   width: 100%;
-  /*max-width: 900px;*/
   margin: 0 auto;
   padding: 1em 1em 0;
   position: relative;
@@ -53,14 +52,13 @@ tr:nth-child(2) td {
 
 th {
   height: 40px;
-  -webkit-transition: height 2s; /* For Safari 3.1 to 6.0 */
   transition: height 2s;
+  -webkit-transition: height 2s; /* For Safari 3.1 to 6.0 */
 }
 
 th input {
-  -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
   transition: 2s;
-
+  -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
 }
 
 th.rotated {
@@ -74,10 +72,6 @@ th.rotated input {
   transform:rotate(-55deg);
   -ms-transform:rotate(-55deg); /* IE 9 */
   -webkit-transform:rotate(-55deg); /* Opera, Chrome, and Safari */
-}
-
-td:first-child.rotated, th:first-child.rotated {
-  width: 200px;
 }
 
 td:first-child, th:first-child {
