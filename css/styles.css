@@ -13,6 +13,7 @@ body {
 }
 
 #header {
+  font-family: Georgia;
   width: 100%;
   max-width: 900px;
   margin: 5px auto 0 auto;
@@ -21,12 +22,27 @@ body {
 }
 
 h1 {
+  /*font-family: times;*/
+  font-family: Georgia;
+  /*font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;*/
+  font-weight: 600;
   text-align: center;
   margin-bottom: 0px;
+  color: #556B2f;
+}
+
+h3 {
+  font-family: Georgia;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 18px;
+  color: #556B2f;
+  font-style: italic;
 }
 
 a {
-  color: #7DA193;
+  color: #556B2F;
 }
 
 table {
@@ -40,8 +56,8 @@ th, td {
   font-family: 'Walter Turncoat', arial;
   font-weight: bold;
   font-size: 18px;
-  border-top: 3px #7DA193 solid;
-  border-right: 3px #7DA193 solid;
+  border-top: 3px #556B2F solid;
+  border-right: 3px #556B2F solid;
   padding: 4px;
   margin: 0;
 }
@@ -76,11 +92,11 @@ th.rotated input {
 
 td:first-child, th:first-child {
   width: 200px;
-  border-left: 3px #7DA193 solid;
+  border-left: 3px #556B2F solid;
 }
 
 tr:last-child td {
-  border-bottom: 3px #7DA193 solid;
+  border-bottom: 3px #556B2F solid;
 }
 
 td.total {
