@@ -104,7 +104,7 @@ $(document).ready(function(){
 
     // remove background color from old leader
     $('.name').parent().css("background-color", "transparent");
-    $('.total').css("background-color", "transparent");
+    $('.total_row').css("background-color", "transparent");
     
     // set local variables to the css ids of the new leader
     var name_id = "#player" + leader+"_name";
