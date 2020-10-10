@@ -1,4 +1,4 @@
-# An interactive score card for a card game called Contract Rummy.  
+# Interactive scorecard for "Contract Rummy"
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f1bb500c-a707-4b08-b40d-4a9c99a73d03/deploy-status)](https://app.netlify.com/sites/contractscorecard/deploys)
 
