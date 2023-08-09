@@ -7,4 +7,3 @@
 If you don't know the game, here is [one version of rules](http://www.pagat.com/rummy/ctrummy.html). 
 
 I wrote about the process of building it in about.markdown file.
-
