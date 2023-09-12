@@ -4,6 +4,6 @@
 
 **[Live demo](https://contractscorecard.netlify.app/)**
 
-If you don't know the game, here is [one version of rules](http://www.pagat.com/rummy/ctrummy.html). 
+If you don't know the game Contract Rummy, here is [one version of rules](http://www.pagat.com/rummy/ctrummy.html).
 
-I wrote about the process of building it in about.markdown file.
+I wrote about the process of building this project in about.markdown file.

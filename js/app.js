@@ -150,7 +150,7 @@ $(document).ready(function () {
   }
 
   // Listener on Reset button
-  $("#reset-form-button").on("click", function() {
+  $("#reset-form-button").on("click", function () {
     resetScorecard();
   });
 });
