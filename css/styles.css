@@ -60,7 +60,6 @@ table {
   margin: 0 auto;
   padding: 1em 1em 0;
   position: relative;
-
 }
 
 th, td {
@@ -139,4 +138,10 @@ th.rotated input {
   transform:rotate(-55deg);
   -ms-transform:rotate(-55deg); /* IE 9 */
   -webkit-transform:rotate(-55deg); /* Opera, Chrome, and Safari */
+}
+
+#reset-form-button {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Univers, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", Inter, "Nimbus Sans", "Nimbus Sans L", Tahoma, Geneva, Arial, sans-serif;
+  margin: 40px 1em 0 1em;
+  font-size: 26px;
 }

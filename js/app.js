@@ -136,4 +136,21 @@ $(document).ready(function () {
   function straightenNames() {
     $("th").removeClass("rotated");
   }
+
+  function resetScorecard() {
+    // clear all names and individual hand scores
+    $("input").val("");
+    // clear  total scores
+    $(".total_score").html("");
+    // Reset names boxes orientations
+    straightenNames();
+    // remove background color from old leader
+    $(".name").parent().css("background-color", "transparent");
+    $(".total_row").css("background-color", "transparent");
+  }
+
+  // Listener on Reset button
+  $("#reset-form-button").on("click", function() {
+    resetScorecard();
+  });
 });
