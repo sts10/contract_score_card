@@ -9,16 +9,16 @@ html{
 }
 
 body {
-  font-family: 'Walter Turncoat', arial;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Univers, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", Inter, "Nimbus Sans", "Nimbus Sans L", Tahoma, Geneva, Arial, sans-serif;
 }
 
 #header {
-  font-family: times;
   width: 100%;
   max-width: 900px;
   margin: 5px auto 0 auto;
   position: relative;
-
+  font-size: 130%;
+  line-height: 1.3;
 }
 
 h1 {
@@ -63,7 +63,6 @@ table {
 }
 
 th, td {
-  font-family: times;
   color: #556B2F;
   height: 37px; /* admittedly arbitrary... */
   font-size: 18px;
@@ -106,7 +105,8 @@ td.total_row {
 }
 
 #total_label {
-  font-family: times;
+  /* A bit awkward to re-specify font stack here, but I'm OK with it. */
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Univers, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", Inter, "Nimbus Sans", "Nimbus Sans L", Tahoma, Geneva, Arial, sans-serif;
   color: #556B2f;
   font-weight: bold;
   text-align: left;
@@ -126,7 +126,6 @@ input[type=text] {
   border: 0;
 }
 
-
 th.rotated {
   height: 100px;
 }
@@ -140,8 +139,14 @@ th.rotated input {
   -webkit-transform:rotate(-55deg); /* Opera, Chrome, and Safari */
 }
 
-#reset-form-button {
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Univers, "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", Inter, "Nimbus Sans", "Nimbus Sans L", Tahoma, Geneva, Arial, sans-serif;
+#footer {
   margin: 40px 1em 0 1em;
+}
+
+#reset-form-button {
   font-size: 26px;
+}
+
+#code-link {
+  font-family:Consolas,Monaco,"Lucida Console","Liberation Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New", monospace;
 }
